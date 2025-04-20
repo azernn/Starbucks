@@ -20,7 +20,7 @@ function show() {
         menuDesc.innerHTML += `<p class="text-xl text-black">${item.name}</p>
          ${item.children.map(child => {
             return `<ul class=" text-[#00000094] font-medium">
-                    <li><a href="" >${child.name}</a></li>
+                    <li onclick='showİtems("${child.id}")'><a href="" >${child.name}</a></li>
                 </ul>`
         }
         ).join('')}
@@ -32,7 +32,7 @@ function show() {
         <ul class="md:flex flex-wrap gap-4">
         ${item.children.map(elem => {
 
-            return `<li onclick='showProducts("${elem.id}")' class="my-[15px] cursor-pointer flex w-full sm:w-[53%] md:w-[48%] text-center items-center gap-2">
+            return `<li onclick='showİtems("${elem.id}")' class="my-[15px] cursor-pointer flex w-full sm:w-[53%] md:w-[48%] text-center items-center gap-2">
                             <img src="${elem.categoryImageURL}" alt="photo" class="md:w-[148px] md:h-[145px] w-[110px] h-[110px] rounded-[50%] object-cover"/>
                             <span class="w-[140px] text-[13x] md:text-[19px]">${elem.name}</span>
                         </li>`
@@ -42,63 +42,22 @@ function show() {
 
 }
 
-// function productItem(arg1, arg) {
-//     let filtred = data.filter(item => item.displayOrder == arg1);
-//     let matchedData = filtred[0].children.filter(item => item.name == arg);
-//     menuDescRigh.innerHTML = '';
-    
-//     console.log(matchedData);
-//     menuDescRigh.innerHTML+=` <p class="text-[#00000094] font-medium mb-5">Menu/ <span class="font-semibold text-lg">${matchedData.name}</span></p>
-//                     <p class="font-bold text-3xl mb-9"></p>`
-//     let output = `<ul class="md:flex flex-wrap gap-4">`;
-//     matchedData[0].children.forEach(elem => {
-//         elem.products.forEach(prod => {
-//             output+= `
-
-//                 <ul class="md:flex flex-wrap gap-4">
-//                     <li class="my-[15px] cursor-pointer flex w-full sm:w-[53%] md:w-[48%] text-center items-center gap-2">
-//                         <img src="${prod.imageURL}" alt="photo" class="md:w-[148px] md:h-[145px] w-[110px] h-[110px] rounded-[50%] object-cover"/>
-//                         <span class="w-[140px] text-[15px] md:text-[19px]">${prod.name}</span>
-//                     </li>
-//                 <ul/>
-//                 `;
-//         });
-//     });
-//     // menuDescRigh.innerHTML+=`
-//     //      <p class="text-[#00000094] font-medium mb-5">Menu/ <span class="font-semibold text-lg">${matchedData.name}</span></p>
-//     //      <p class="font-bold text-3xl mb-9"></p>
-//     //      ${matchedData[0].children.forEach(elem => {
-//     //         elem.products.forEach(prod=>{
-//     //             // console.log(prod.name)
-                
-//     //             return `<ul class="md:flex flex-wrap gap-4">
-//     //                 <li class="my-[15px] cursor-pointer flex w-full sm:w-[53%] md:w-[48%] text-center items-center gap-2">
-//     //                  <img src="${prod.imageURL}" alt="photo" class="md:w-[148px] md:h-[145px] w-[110px] h-[110px] rounded-[50%] object-cover"/>
-//     //                  <span class="w-[140px] text-[13px] md:text-[19px]">${prod.name}</span>
-//     //                  </li>
-//     //             <ul/>`
-//     //         })
-//     //      })}
-//     // `
-//     output += `</ul>`;
-//     menuDescRigh.innerHTML = output;
-// }
 
 show()
 
-function showProducts(cod) {
-    let productsArr = []
+function showİtems(cod) {
+    let filterArr = []
     data.map(item => {
         item.children.map(elm => {
             if (elm.id == cod) {
-                elm.children.map(arg => productsArr.push(arg))
+                elm.children.map(arg => filterArr.push(arg))
             }
         })
     })
 
     menuDescRigh.innerHTML = ''
    
-    productsArr.map(item => {
+    filterArr.map(item => {
         menuDescRigh.innerHTML += `
                 <h2 class="font-bold text-[19px] md:text-[24px] mt-10 pb-4">${item.name}</h2>
                 <hr class="mb-8 border-t-[2px] border-[#0000001a]" />
@@ -116,5 +75,9 @@ function showProducts(cod) {
                 </ul>
                 </div>
             `
+    })
+    scrollTo({
+        top: 0,
+        behavior:'smooth'
     })
 }
