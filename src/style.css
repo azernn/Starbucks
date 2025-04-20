@@ -1,0 +1,9 @@
+.side{
+    right: 0;
+  }
+  @font-face {
+    font-family: 'Sodosans';
+    src: url('/fonts/SoDoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }

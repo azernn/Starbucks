@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks</title>
+    <link rel="stylesheet" href="src/output.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="shortcut icon" href="img/starbucks.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="font-sodo">
+    <header class="p-4 border-b-1 border-black shadow-md relative z-20">
+        <div class="container flex justify-between h-16 mx-auto">
+            <div class="flex gap-3">
+                <a href="index.htm" class="flex items-center p-2 "><img src="img/starbucks.png" alt=""
+                        class="w-[50px] h-[50px]"></a>
+                <ul class="items-stretch hidden space-x-1 md:flex text-sm ">
+                    <li class="flex tracking-widest">
+                        <a href="menu.htm"
+                            class="flex items-center px-3 -my-4 active font-bold uppercase hover:text-green-700  ">Menu</a>
+                    </li>
+                    <li class="flex tracking-widest">
+                        <a href="#"
+                            class="flex items-center px-3 -my-4  font-bold uppercase hover:text-green-700 ">Rewards</a>
+                    </li>
+                    <li class="flex  tracking-widest">
+                        <a href="#"
+                            class="flex items-center  px-3 -my-4 font-bold uppercase hover:text-green-700">Gift
+                            cards</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+            <div class="items-center flex-shrink-0 hidden md:flex gap-5">
+                <a href="#" class="hover:text-green-700"><i class="fa-solid fa-location-dot text-2xl mx-2"></i><span
+                        class=" text-sm">Find a store</span></a>
+                <a href="#"
+                    class="px-4 py-2 border border-black rounded-full text-black hover:bg-gray-100 transition font-bold text-[15px]">
+                    Sign in</a>
+                <a href="#"
+                    class="px-4 py-2 bg-black text-white rounded-full hover:bg-gray-800 transition font-bold text-[15px]">Join
+                    now </a>
+            </div>
+            <button class="p-4 md:hidden" onclick="openSide()" id="icon">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <div class="w-full fixed top-[100px] right-[-100%] md:hidden transition-all ease-in-out duration-700 z-10 flex justify-end "
+            id="sideBar" onclick="openSide()">
+            <div class="flex flex-col gap-9 w-[80%] bg-white h-[100vh] p-6 ">
+                <div class="flex flex-col gap-6 text-xl">
+                    <a href="menu.htm">Menu</a>
+                    <a href="">Rewards</a>
+                    <a href="">Gift Cards</a>
+                </div>
+                <hr>
+                <div class="flex flex-col gap-2 sm:flex-row">
+                    <a href="#"
+                        class="pl-[13px] pt-[4px] border w-[79px] h-[32px] border-black rounded-full text-black hover:bg-gray-100 transition font-bold text-[15px]">
+                        Sign in</a>
+                    <a href="#"
+                        class="pl-[11px] pt-[4px] w-[85px] h-[32px] bg-black text-white rounded-full hover:bg-gray-800 transition font-bold text-[15px]">Join
+                        now </a>
+                </div>
+                <a href="#" class="hover:text-green-900"><i class="fa-solid fa-location-dot text-2xl mx-2"></i><span
+                        class="font-semibold  ">Find a store</span></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="flex flex-col md:flex-row my-7">
+            <img src="img/item1.webp" alt="" class="w-full md:w-1/2 md:order-1">
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center text-center  bg-[#32462f] gap-7 py-5 px-8 ">
+                <p class="md:text-[48px] text-3xl text-white font-bold tracking-wider leading-[57px]">The Spring Edit</p>
+                <p class="md:text-[28px] text-2xl text-white ">Fresh flavors, familiar joy.</p>
+                <a href="#"class="px-5 py-2 border border-white rounded-full text-white hover:bg-[#243222] transition font-bold text-[17px] tracking-wide"> View the menu</a>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row my-7">
+           <div class="w-full md:w-1/2 bg-[#5f4633] flex items-center justify-center"> <img src="img/item2.jpg" alt="" class=""></div>
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center text-center  bg-[#5f4633] gap-7 py-5 px-8 ">
+                <p class="md:text-[24px] text-[19px] text-white font-bold tracking-wider ">It’s a great day for free coffee</p>
+                <p class="md:text-[19px] text-[16px] text-white leading-7 w-[76%]">Start your Starbucks® Rewards journey with a coffee on us. Join now and enjoy a free handcrafted drink with a qualifying purchase during your first week.*</p>
+                <a href="#"class="px-5 py-2 border border-white rounded-full text-white hover:bg-[#243222] transition font-bold text-[15px] tracking-wide"> Join now</a>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row my-7">
+            <img src="img/item3.jpg" alt="" class="w-full md:w-1/2 md:order-1">
+            <div class="w-full md:w-1/2 flex flex-col items-center justify-center text-center bg-[#32462f] gap-7 py-5 px-8 ">
+                <p class="md:text-[50px] text-[28px] text-white font-bold tracking-wider leading-[57px] w-[80%] ">Spread spring cheer</p>
+                <p class="md:text-[24px] text-[22px] text-white w-[80%] ">Wish someone a Happy Easter and joyful spring with a Starbucks Card.</p>
+                <a href="#"class="px-5 py-2 border border-white rounded-full text-white hover:bg-[#243222] transition font-bold text-[15px] tracking-wide">Send eGift</a>
+            </div>
+        </div>
+        <div class="flex flex-col md:flex-row my-7">
+            <div class="w-full md:w-1/2 bg-[#32452f] flex items-center justify-center"> <img src="img/item4.webp" alt="" class=""></div>
+             <div class="w-full md:w-1/2 flex flex-col items-center justify-center text-center  bg-[#32452f] gap-7 py-5 px-8 ">
+                 <p class="lg:text-[50px] text-[28px] text-white font-bold tracking-wider leading-[57px] w-[80%]">Nondairy milk, no extra charge</p>
+                 <p class="lg:text-[24px] text-[22px] text-white leading-7 w-[76%]">Customize your drink with your favorite nondairy milk—like soy, coconut, almond or oat—for no additional charge.</p>
+                 <a href="#"class="px-5 py-2 border border-white rounded-full text-white hover:bg-[#243222] transition font-bold text-[15px] tracking-wide"> Order now</a>
+             </div>
+         </div>
+         <div class="flex flex-col md:flex-row my-7">
+            <div class="w-full md:w-1/2 bg-[#32452f] flex items-center justify-center md:order-1"> <img src="img/item5.jpg" alt="" class=""></div>
+             <div class="w-full md:w-1/2 flex flex-col items-center justify-center text-center  bg-[#5f4633] gap-7 py-5 px-8 ">
+                 <p class="lg:text-[50px] text-[28px] text-white font-bold tracking-wider leading-[57px] w-[80%]">More reasons to stay awhile</p>
+                 <p class="lg:text-[24px] text-[22px] text-white leading-7 w-[72%]">Mugs, glasses and the condiment bar are back—and get free refills of hot and iced brewed coffee or tea.**</p>
+                 <a href="#"class="px-5 py-2 border border-white rounded-full text-white hover:bg-[#243222] transition font-bold text-[15px] tracking-wide"> Learn now</a>
+             </div>
+         </div>
+
+         <div class="flex  items-center justify-center">
+            <div class=" md:w-[53%] w-[82%] gap-14 text-center flex flex-col text-[13px] md:text-[15px] tracking-wide leading-relaxed font-medium">
+                <p class="my-6">*Valid for new Starbucks Rewards members for 7 days from sign up. Coupon will be available in the offers tab of your Starbucks app following sign up and may take up to 48 hours to arrive. Good at participating U.S. stores for a handcrafted menu-sized beverage with qualifying purchase ($8 max value). Qualifying purchase excludes alcohol, Starbucks Card and Card reloads. Limit one. Cannot be combined with other offers or discounts. Excludes delivery services. Sign up before 6/29/2025.</p>
+                <p class="my-6">**Free refills of hot and iced brewed coffee or tea during same store visit. Excludes Cold Brew, Nitro Cold Brew, Iced Tea Lemonade, and flavored Iced Tea and Starbucks Refreshers® base. At participating stores. Visit <a href="http://starbucks.com/refills" class="underline">http://starbucks.com/refills</a>  to learn more</p>
+             </div>
+         </div>
+    </main>
+  <footer class="border-t-2 p-9">
+    <!-- burani tekminlesdirecem -->
+    <div class=" gap-8 max-w-[1100px] mx-auto border-b-2 hidden lg:flex">
+        <ul class="space-y-5 text-[#00000094] font-medium w-[20%] mb-11">
+            <li class="text-xl text-black"><a href="">About Us</a></li>
+            <li><a href=""  class="hover:text-black">Our Company</a></li>
+            <li><a href="" class="hover:text-black"> Our Coffee</a></li>
+            <li><a href="" class="hover:text-black">About Starbucks</a></li>
+            <li><a href="" class="hover:text-black">Starbucks Archive</a></li>
+            <li><a href="" class="hover:text-black">Investor Relations</a></li>
+            <li><a href="" class="hover:text-black">Customer Service</a></li>
+            <li><a href="" class="hover:text-black">Contact Us</a></li>
+        </ul>
+        <ul class="space-y-5 w-[20%] text-[#00000094] font-medium  ">
+            <li><a href="" class="text-xl text-black"> Careers</a></li>
+            <li><a href="" class="hover:text-black">Culture and Values</a></li>
+            <li><a href="" class="hover:text-black">Belonging at Starbucks</a></li>
+            <li><a href="" class="hover:text-black">College Achievement Plan</a></li>
+            <li><a href="" class="hover:text-black">Alumni Community</a></li>
+            <li><a href="" class="hover:text-black">U.S. Careers</a></li>
+            <li><a href="" class="hover:text-black">International Careers</a></li>
+        </ul>
+        <ul class="space-y-5 w-[20%] text-[#00000094] font-medium ">
+            <li><a href="" class="text-xl text-black"> Social Impact</a></li>
+            <li><a href="" class="hover:text-black">Communities</a></li>
+            <li><a href="" class="hover:text-black">Starbucks Foundation</a></li>
+            <li><a href="" class="hover:text-black">Sustainability</a></li>
+            <li><a href="" class="hover:text-black">Environmental and Social Impact Reporting</a></li>
+        </ul>
+        <ul class="space-y-5 w-[20%] text-[#00000094] font-medium ">
+            <li><a href="" class="text-xl text-black"> For Business Partners</a></li>
+            <li><a href="" class="hover:text-black">Landlord Support Center</a></li>
+            <li><a href="" class="hover:text-black">Suppliers</a></li>
+            <li><a href="" class="hover:text-black">Corporate Gift Card Sales</a></li>
+            <li><a href="" class="hover:text-black">Office and Foodservice Coffee</a></li>
+        </ul>
+        <ul class="space-y-5 w-[20%] text-[#00000094] font-medium">
+            <li><a href="" class="text-xl text-black">Order and Pick Up</a></li>
+            <li><a href="" class="hover:text-black">Order on the App</a></li>
+            <li><a href="" class="hover:text-black">Order on the Web</a></li>
+            <li><a href="" class="hover:text-black">Delivery</a></li>
+            <li><a href="" class="hover:text-black">Order and Pick Up Options</a></li>
+            <li><a href="" class="hover:text-black">Explore and Find Coffee for Home</a></li>
+        </ul>
+    </div>
+ <div id="footerDrop" class="lg:hidden">
+        <div onclick="toggleFooter(1)" class="mb-4 transition-all ease-in-out duration-700">
+            <div class="flex items-center justify-between py-2 text-[19px] max-md:text-[16px]">
+                <h5>About Us</h5>
+                <i id="icon1" class="fa-solid cursor-pointer fa-chevron-down"></i>
+            </div>
+            <div id="footerDown1" class="hidden mt-4">
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Our Company</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Our Coffee</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">About Starbucks</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Starbucks Archive</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Investor Relations</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Customer Service</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Accessibility</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Contact Us</a></div>
+            </div>
+        </div>
+
+
+        <div onclick="toggleFooter(2)" class="mb-4">
+            <div class="flex items-center justify-between py-2 text-[19px] max-md:text-[16px]">
+                <h5>Careers</h5>
+                <i id="icon2" class="fa-solid cursor-pointer fa-chevron-down"></i>
+            </div>
+            <div id="footerDown2" class="hidden mt-4">
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Culture and Values</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Belonging at Starbucks</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">College Achievement Plan</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Alumni Community</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">U.S. Careers</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">International Careers</a></div>
+            </div>
+        </div>
+
+        <div onclick="toggleFooter(3)" class="mb-4">
+            <div class="flex items-center justify-between py-2 text-[19px] max-md:text-[16px]">
+                <h5>Social Impact</h5>
+                <i id="icon3" class="fa-solid cursor-pointer fa-chevron-down"></i>
+            </div>
+            <div id="footerDown3" class="hidden mt-4">
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Communities</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Starbucks Foundation</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Sustainability</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Environmental and Social Impact Reporting</a></div>
+            </div>
+        </div>
+
+        <div onclick="toggleFooter(4)" class="mb-4">
+            <div class="flex items-center justify-between py-2 text-[19px] max-md:text-[16px]">
+                <h5>For Business Partners</h5>
+                <i id="icon4" class="fa-solid cursor-pointer fa-chevron-down"></i>
+            </div>
+            <div id="footerDown4" class="hidden mt-4">
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Landlord Support Center</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Suppliers</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Corporate Gift Card Sales</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Office and Foodservice Coffee</a></div>
+            </div>
+        </div>
+
+        <div onclick="toggleFooter(5)" class="mb-4">
+            <div class="flex items-center justify-between py-2 text-[19px] max-md:text-[16px]">
+                <h5>Order and Pick Up</h5>
+                <i id="icon5" class="fa-solid cursor-pointer fa-chevron-down"></i>
+            </div>
+            <div id="footerDown5" class="hidden mt-4">
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Order on the App</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Order on the Web</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Delivery</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Order and Pick Up Options</a></div>
+                <div class="mb-3"><a class="text-[15px] text-gray-500 font-[400]" href="">Explore and Find Coffee for Home</a></div>
+            </div>
+        </div>
+        </div>
+
+    <div class="flex gap-4 mt-7">
+        <i class="fa-brands fa-spotify text-3xl"></i>
+        <i class="fa-brands fa-facebook text-3xl"></i>
+        <i class="fa-brands fa-pinterest text-3xl"></i>
+        <a href="" class="bg-black flex items-center justify-center px-[6.5px] rounded-full"><i class="fa-brands fa-instagram text-xl text-white"></i></a>
+        <a href="" class="bg-black flex items-center justify-center px-[6.5px] rounded-full"><i class="fa-brands fa-youtube text-[16px] text-white"></i></a>
+        <a href="" class="bg-black flex items-center justify-center px-[6.5px] rounded-full"><i class="fa-brands fa-x-twitter text-[17px] text-white"></i></a>
+    </div>
+        <ul class="space-y-4 my-9 tracking-wide font-medium">
+            <li class="hover:underline"><a href="">Privacy Notice</a></li>
+            <li class="hover:underline"><a href="">Consumer Health Privacy Notice</a></li>
+            <li class="hover:underline"><a href="">Terms of Use</a></li>
+            <li class="hover:underline"><a href="">Do Not Share My Personal Information</a></li>
+            <li class="hover:underline"><a href="">CA Supply Chain Act</a></li>
+            <li class="hover:underline"><a href="">Accessibility</a></li>
+            <li class="hover:underline"><a href="">Cookie Preferences</a></li>
+        </ul>
+        <p class="text-[#00000094]">© 2025 Starbucks Coffee Company. All rights reserved.</p>
+</footer>
+  
+</body>
+<script src="js/index.js"></script>
+</html>
