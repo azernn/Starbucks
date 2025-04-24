@@ -26,7 +26,6 @@ function show() {
         ).join('')}
         `
         menuDescRigh.innerHTML += `
-        <p class="font-bold text-3xl mb-6">Menu</p>
         <p class="font-bold text-2xl mb-6">${item.name}</p>
         <hr class="mb-8 border-t-[2px] border-[#0000001a] "/>
         <ul class="md:flex flex-wrap gap-4">
