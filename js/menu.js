@@ -4,7 +4,7 @@ const menuDescRigh = document.getElementById('menuDescRigh')
 let data = []
 
 function fetchData() {
-    fetch('http://localhost:3000/menus')
+    fetch('https://starbucks-data-one.vercel.app/menus')
         .then(res => res.json())
         .then(info => {
             data.push(...info),
